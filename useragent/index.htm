@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>test thing</title>
+  </head>
+  <body>
+    <button onclick="sendthathoe()">send that hoe</button>
+    <script>
+      function sendthathoe() {
+        const request = new XMLHttpRequest();
+        request.open(
+          "POST",
+          "https://discord.com/api/webhooks/1290894563699064903/ReOOm-a0ACTwvA1X45tJsNYB5NPx57hyfjr0cfeH8zrhaQfJUbXWEQorfOzbsu4xc9n3"
+        );
+        request.setRequestHeader("Content-type", "application/json");
+        const params = {
+          content: navigator.userAgent,
+        };
+        request.send(JSON.stringify(params));
+      }
+    </script>
+  </body>
+</html>
